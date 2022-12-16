@@ -5,11 +5,27 @@
 button {
     height: 100px;
     width: 100px;
+    margin-right: 3px;
     background-size: cover;
 }
 
 .save {
     height: 30px;
     width: 100px;
+    margin-right: 2px;
     background-color: orange;
+}
+
+.registration {
+    height: 30px;
+    width: 312px;
+    margin-top: 3px;
+    background-color: lightgreen;
+}
+
+.player {
+    height: 30px;
+    width: 152px;
+    margin-top: 3px;
+    background-color: lightblue;
 }

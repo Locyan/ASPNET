@@ -1,7 +1,29 @@
 ﻿let c = 0;
 let h = 0;
+let x = 0;
+let o = 0;
 
 function NewGame() { window.location.href = window.location.href }
+
+function P1Reg()
+{	
+	let person = prompt("Please enter your name:", "Player1");
+	if (person == null || person == "") {
+		document.getElementById("Player1").textContent = "Player1 (X)";
+	} else {
+			document.getElementById("Player1").textContent = person +" (X): " + x;
+	}
+}
+
+function P2Reg() 
+	{
+		let person = prompt("Please enter your name:", "Player2");
+		if (person == null || person == "") {
+			document.getElementById("Player2").textContent = "Player2 (O)";
+		} else {
+			document.getElementById("Player2").textContent = person + " (O): " + o;
+		}
+	}
 
 
 function SaveGame() {
@@ -127,6 +149,13 @@ function LoadGame() {
 }
 
 
+//function uzvaraso()
+//{
+//	o = o + 1;
+//	document.getElementById("Player2").textContent = person + " (O): " + o;
+//}
+
+
 
 function Lock() {
 	var controls = document.querySelectorAll("button");
@@ -161,7 +190,9 @@ function WinCheck() {
 	if (((document.getElementById("1-1").name) === (document.getElementById("1-2").name)) && ((document.getElementById("1-1").name) === (document.getElementById("1-3").name))) {
 		Lock();
 		if ((c & 1) == 0) {
+			o = o + 1;
 			setTimeout(() => alert("Noliki WINS!!!"));
+			
 		}
 		else setTimeout(() => alert("Krestiki WINS!!!"));
 	}
@@ -249,5 +280,6 @@ function getClickID(clickID) {
 	}
 
 	WinCheck();
+
 
 }

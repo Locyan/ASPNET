@@ -12,11 +12,11 @@ namespace ASPNET.Pages
             _logger = logger;
         }
 
-        public IActionResult OnGet()
-        {
-            if (RouteData.Values["enter"] != null)
-                return Page();
-            else return Redirect("Shared/Login");
-        }
+        //public IActionResult OnGet()
+        //{
+        //    if (RouteData.Values["enter"] != null)
+        //        return Page();
+        //    else return Redirect("Shared/Login");
+        //}
     }
 }

@@ -1,4 +1,4 @@
-﻿@page "{enter?}"
+﻿@page
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
@@ -24,9 +24,21 @@
     </tr>
 </table>
 
+<div>
 <button class="save" name="NewGame" onclick="NewGame()"><b>NEW</b></button>
 <button class="save" onclick="SaveGame()"><b>SAVE</b></button>
 <button class="save" onclick="LoadGame()"><b>LOAD</b></button>
+</div>
+
+
+<div>
+<button class="registration" name="Registration" onclick="window.location.href = 'Shared/Login'"><b>LOGIN</b></button>
+</div>
+
+<div>
+<button class="player" id="Player1" name="Player1" onclick="P1Reg()" ><b>Player1</b></button>
+<button class="player" id="Player2" name="Player2" onclick="P2Reg()" ><b>Player2</b></button>
+</div>
 
 <script src="tictac.js"></script>
 

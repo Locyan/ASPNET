@@ -1,0 +1,31 @@
+﻿@page
+@model LoginModel
+@{
+	ViewData["Title"] = "Login page";
+}
+
+<h2>Ievadiet datus par sevi:</h2>
+<form onsubmit="confirmInput()" action="https://localhost:7163/Index" method="post" >
+<label>Vārds:</label><br />
+<p><input name="name" /></p>
+<label>Uzvārds:</label><br />
+<p><input name="surname" /></p>
+<label>Vecums:</label><br />
+<p><input name="age" /></p>
+<input type="submit" value="Iesniegt"/>
+</form>
+
+<h3>Jūsu dati:</h3>
+
+<label>Vārds:</label>
+<br />
+<h4>@Model.Name</h4>
+
+<label>Uzvārds:</label>
+<br />
+<h4>@Model.Surname</h4>
+
+<label>Vecums:</label>
+<br />
+<h4>@Model.Age</h4>
+

@@ -271,6 +271,7 @@ function getClickID(clickID) {
 		button.style.backgroundImage = "url('nolik.jpg')";
 		button.name = "nolik";
 		document.getElementById(event.target.id).disabled = true;
+		
 	}
 	else {
 		button.style.backgroundImage = "url('krestik.jpg')";
